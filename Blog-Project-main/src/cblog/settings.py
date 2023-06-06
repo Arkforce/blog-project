@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import Config, Csv
+from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'database_1', # database name in RDS is written here
         'USER': 'admin', # database master username in RDS is written here
-        'PASSWORD': Config('PASSWORD'),
+        'PASSWORD': config('PASSWORD'),
         'HOST': 'database-1.caumocpqz6im.us-east-1.rds.amazonaws.com',  # database endpoint is written here
         'PORT': '3306' # database port is written here
     }
